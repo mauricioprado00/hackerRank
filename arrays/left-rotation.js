@@ -24,7 +24,9 @@
 function solution(a, d) {
   let index = 0;
   let firstElement;
-
+  
+  // ignore full loop of the array
+  d = d % a.length;
   while (index < d) {
     firstElement = a.shift();
     a.push(firstElement);
